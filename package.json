@@ -1,0 +1,27 @@
+{
+  "name": "cardly",
+  "version": "0.0.1",
+  "description": "code name: cardly. landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo lol, test?"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xzela/cardly.git"
+  },
+  "keywords": [
+    "cards",
+    "greetings",
+    "greeting",
+    "cards",
+    "lazy"
+  ],
+  "author": "Zeph LaFassett",
+  "contributors": ["Alison Voss"],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xzela/cardly/issues"
+  },
+  "homepage": "https://github.com/xzela/cardly"
+}
