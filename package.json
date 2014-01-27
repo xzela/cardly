@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "code name: cardly. landing page",
   "main": "index.js",
+  "private": "true"
   "scripts": {
     "test": "echo lol, test?"
   },
