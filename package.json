@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "code name: cardly. landing page",
   "main": "index.js",
-  "private": "true"
+  "private": "true",
   "scripts": {
     "test": "echo lol, test?"
   },
@@ -19,10 +19,16 @@
     "lazy"
   ],
   "author": "Zeph LaFassett",
-  "contributors": ["Alison Voss"],
+  "contributors": [
+    "Alison Voss"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xzela/cardly/issues"
   },
-  "homepage": "https://github.com/xzela/cardly"
+  "homepage": "https://github.com/xzela/cardly",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13"
+  }
 }
