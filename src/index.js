@@ -1,11 +1,9 @@
-var http = require('http');
-var port = 3000;
+var express = require('express');
 
-var server = http.createServer(function (request, response) {
-	response.writeHeader(200);
-	response.end('words');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('hello world');
 });
 
-server.listen(port, function () {
-	console.log("server listening on:" + port);
-});
+app.listen(3000);
