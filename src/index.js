@@ -14,9 +14,11 @@ app.engine('.hbs', exphbs(hbsConfig));
 app.set('view engine', '.hbs');
 app.use(express.bodyParser());
 
+
 var connect = function () {
   var options = { server: { socketOptions: { keepAlive: 1 } } };
   mongoose.connect(mongoConfig.db, options);
+  mongoose.model("signup", mongoConfig.schemas.signup);
 };
 connect();
 
