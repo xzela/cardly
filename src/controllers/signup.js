@@ -5,7 +5,6 @@ var signup = {
 	},
 	post: function (req, res) {
 		var body = req.body;
-		console.log(req);
 		if (body.email !== undefined && body.name !== undefined) {
 			var json = {name: body.name, email: body.email};
 			res.send(201, json);
