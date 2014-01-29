@@ -15,4 +15,10 @@ app.get('/', function (req, res) {
 	res.render('home', {data: string});
 });
 
+app.post('/', function (req, res) {
+	console.log('post accepted');
+	var json = req.body;
+	res.send(json);
+});
+
 app.listen(3000);
