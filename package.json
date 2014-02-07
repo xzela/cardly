@@ -34,6 +34,7 @@
   "dependencies": {
     "express": "~3.4.8",
     "express3-handlebars": "~0.5.0",
-    "mongoose": "~3.8.5"
+    "mongoose": "~3.8.5",
+    "express-validator": "~1.0.1"
   }
 }
