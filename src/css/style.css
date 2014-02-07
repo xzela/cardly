@@ -1,5 +1,66 @@
 /* styles go here */
 
-input {
-	color: red;
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+
+body {
+	background: url('../img/converse.jpg') no-repeat;
+	background: url('../img/converse.jpg') no-repeat center center fixed;
+	background-size: cover;
+	color: #313131;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
 }
+
+h1 {
+	font-size: 5rem;
+	line-height: 4.5rem;
+	margin: 0;
+}
+
+h2 {
+	font-size: 3rem;
+	line-height: 2.75rem;
+}
+
+.content {
+	width: 80%;
+	margin: 2em auto;
+	background: rgba(255,255,255, 0.7);
+	padding: 1.25em;
+	border-radius: 10px;
+	min-height: 360px;
+}
+
+.info {
+	width: 50%;
+	float: left;
+}
+
+.signup {
+	width: 45%;
+	float: right;
+	font-size: 1.25rem;
+}
+
+fieldset {
+	border: 0;
+}
+
+input {
+	padding: 5px;
+	border-radius: 3px;
+	width: 75%;
+	margin-left: 3%;
+	border: 1px solid #ccc;
+	font-size: 1.25rem;
+}
+ input[type="submit"] {
+ 	background: #00A3F0;
+ 	padding: 1em;
+ 	font-size: 1.2rem;
+ 	font-weight: bold;
+ 	border: 0;
+ 	border-radius: 5px;
+ 	width: 100%;
+ }
