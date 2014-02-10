@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var signup = {
 	get: function (req, res) {
-		res.send(404, 'no gets allow');
+		res.redirect('/');
 	},
 	post: function (req, res) {
 		var body = req.body;
@@ -17,8 +17,15 @@ var signup = {
 			if (errors) {
 				res.render('home', json);
 			} else {
+				console.log('before Signup model');
 				var user = new Signup({name: body.name, email: body.email});
+				Signup.on('error', function () {
+					res.send('ok');
+				});
+				console.log('after Signup model');
+				console.log(user);
 				user.save(function (err) {
+					console.log(err);
 					if (err) {
 						console.log(err);
 						res.send(500);

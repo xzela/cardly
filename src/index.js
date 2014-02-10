@@ -24,9 +24,13 @@ app.use(express.bodyParser());
 app.use(expressValidator());
 
 var connect = function () {
-  var options = { server: { socketOptions: { keepAlive: 1 } } };
-  mongoose.connect(mongoConfig.db, options);
-  mongoose.model("signup", mongoConfig.schemas.signup);
+	var options = { server: { socketOptions: { keepAlive: 1 } } };
+	mongoose.connection.on('error', function (err) {
+		console.error(err);
+		console.error('error connecting to Mongo. You will not be able to insert new records');
+	});
+	mongoose.connect(mongoConfig.db, options);
+	mongoose.model("signup", mongoConfig.schemas.signup);
 };
 connect();
 

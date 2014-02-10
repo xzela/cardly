@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 
 var users = {
 	get: function (req, res) {
+
 		var Signup = mongoose.model('signup');
+
 		var user = new Signup({name: 'cat', email: 'aol@aol2.com'});
 		user.save(function (err) {
 			if (err) {
