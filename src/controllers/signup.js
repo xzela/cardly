@@ -17,22 +17,16 @@ var signup = {
 			if (errors) {
 				res.render('home', json);
 			} else {
-				console.log('before Signup model');
-				var user = new Signup({name: body.name, email: body.email});
-				Signup.on('error', function () {
-					res.send('ok');
-				});
-				console.log('after Signup model');
-				console.log(user);
-				user.save(function (err) {
-					console.log(err);
+				Signup.find({}, function (err, nothing) {
 					if (err) {
-						console.log(err);
-						res.send(500);
+						console.error(err);
+						console.log('some random err');
+						res.end('error!');
 					}
-					console.log("save ok");
-					res.render('thanks', json);
 				});
+				var user = new Signup({name: body.name, email: body.email});
+				user.save();
+				res.render('thanks', json);
 			}
 		} else {
 			res.send(404);
