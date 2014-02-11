@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     cssmin: {
       add_banner: {
         options: {
-          banner: '/* minified by your mom */'
+          banner: '/* minified by your mom with love */'
         },
         files: {
           'build/css/style.css': ['src/css/style.css']
