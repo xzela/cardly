@@ -29,6 +29,20 @@ module.exports = function (grunt) {
       main: {
         files: [ { expand: true, cwd: 'src/img', src: ['**'], dest: 'build/img/' }]
       }
+    },
+    concurrent: {
+      dev: {
+        tasks: ['nodemon:dev'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+    nodemon: {
+      dev: {
+        script: 'src/index.js',
+        // cwd: 'src/'
+      }
     }
   });
 
@@ -37,7 +51,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
+  grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-nodemon');
+
   // Default task(s).
   grunt.registerTask('default', []);
+  grunt.registerTask('run', ['concurrent:dev']);
   grunt.registerTask('build', ['mkdir', 'cssmin', 'copy']);
 };
