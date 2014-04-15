@@ -35,25 +35,4 @@ var signup = function (request, response) {
 	}
 };
 
-/**
- * [_get description]
- *
- * @param  {[type]} request  [description]
- * @param  {[type]} response [description]
- * @return {[type]}          [description]
- */
-var _get = function (request, response) {
-	var users = new Users();
-	users.on("query", function (data) {
-		response.json(data);
-	});
-	users.on("error", function (error) {
-		console.log(error);
-		response.json(error);
-	});
-	users.getAll();
-};
-
-
-exports.get = _get;
 exports.signup = signup;

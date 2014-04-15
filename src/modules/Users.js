@@ -30,9 +30,22 @@ function Users(options) {
 			if (error) {
 				self.emit("error", error);
 			} else {
-				self.emit("query", data);
+				self.emit("success", data);
 			}
 		});
+	};
+
+	this.getById = function (id) {
+		UserSchema.find(
+			{_id: id},
+			function (error, data) {
+				if (error) {
+					self.emit("error", error);
+				} else {
+					self.emit("success", data);
+				}
+			}
+		);
 	};
 }
 
