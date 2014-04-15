@@ -1,4 +1,4 @@
-var Users = require('../modules/Users'),
+var Users = require('../../modules/Users'),
 	log = require('log4js');
 
 var logger = log.getLogger(__filename);
@@ -57,4 +57,3 @@ var _get = function (request, response) {
 
 exports.get = _get;
 exports.signup = signup;
-// exports.signup = users.signup;

@@ -1,4 +1,4 @@
-var users = require('./user.js'),
+var users = require('./public/user.js'),
 	log = require('log4js');
 
 var logger = log.getLogger(__filename);
