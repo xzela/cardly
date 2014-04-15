@@ -40,8 +40,10 @@ module.exports = function (grunt) {
     },
     nodemon: {
       dev: {
-        script: 'src/index.js',
-        // cwd: 'src/'
+        script: 'index.js',
+        options: {
+          cwd: __dirname + '/src/'
+        }
       }
     }
   });
