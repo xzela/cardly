@@ -38,11 +38,11 @@
     "grunt-concurrent": "~0.5.0"
   },
   "dependencies": {
-    "express": "~3.4.8",
-    "express3-handlebars": "~0.5.0",
-
     "colors": "~0.6.2",
-    "mongoose": "~3.8.5",
-    "express-validator": "~1.0.1"
+    "express": "~3.4.8",
+    "express-validator": "~1.0.1",
+    "express3-handlebars": "~0.5.0",
+    "log4js": "^0.6.13",
+    "mongoose": "~3.8.5"
   }
 }
