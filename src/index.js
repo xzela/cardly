@@ -16,7 +16,7 @@ app.configure(function () {
 app.use(express.static(__dirname));
 
 
-console.log(hbsConfig);
+// console.log(hbsConfig);
 
 app.engine('.hbs', exphbs(hbsConfig));
 app.set('view engine', '.hbs');
@@ -30,12 +30,12 @@ var connect = function () {
 		console.error('error connecting to Mongo. You will not be able to insert new records');
 	});
 	mongoose.connect(mongoConfig.db, options);
-	mongoose.model("signup", mongoConfig.schemas.signup);
+	mongoose.model("user", mongoConfig.schemas.user);
 };
 connect();
 
 // load the routes last!
-require('./routes.js')(app);
+require('./routes/routes.js')(app);
 
 app.listen(app.get('port'), function () {
 	console.log('Server started on port: ' + app.get('port'));
