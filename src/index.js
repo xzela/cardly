@@ -3,8 +3,10 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	hbsConfig = require('./config/handlebars.js'),
 	mongoConfig = require('./config/mongo.js'),
-	expressValidator = require('express-validator');
+	expressValidator = require('express-validator'),
+	log = require('log4js');
 
+var logger = log.getLogger(__filename);
 
 
 var app = express();
@@ -14,9 +16,6 @@ app.configure(function () {
 });
 
 app.use(express.static(__dirname));
-
-
-// console.log(hbsConfig);
 
 app.engine('.hbs', exphbs(hbsConfig));
 app.set('view engine', '.hbs');

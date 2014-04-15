@@ -1,4 +1,7 @@
-var users = require('./user.js');
+var users = require('./user.js'),
+	log = require('log4js');
+
+var logger = log.getLogger(__filename);
 
 module.exports = function (app) {
 	app.get('/', function (req, res) {

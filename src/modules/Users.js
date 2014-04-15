@@ -1,7 +1,10 @@
 var mongoose = require('mongoose'),
 	util = require('util'),
 	events = require('events'),
+	log = require('log4js'),
 	UserSchema = mongoose.model('user');
+
+var logger = log.getLogger(__filename);
 
 function Users(options) {
 	events.EventEmitter.call(this);

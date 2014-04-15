@@ -1,5 +1,7 @@
-var Users = require('../modules/Users');
+var Users = require('../modules/Users'),
+	log = require('log4js');
 
+var logger = log.getLogger(__filename);
 /**
  * [signup description]
  *
