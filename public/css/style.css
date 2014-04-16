@@ -1,11 +1,10 @@
 /* styles go here */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Sans);*/
 
 
 body {
-	background: url('../img/converse.jpg') no-repeat;
-	background: url('../img/converse.jpg') no-repeat center center fixed;
+	background: url('../assets/images/converse.jpg') no-repeat center center fixed;
 	background-size: cover;
 	color: #313131;
 	font-family: 'PT Sans', sans-serif;
