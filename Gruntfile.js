@@ -60,5 +60,5 @@ module.exports = function (grunt) {
   // Default task(s).
   grunt.registerTask('default', []);
   grunt.registerTask('run', ['concurrent:dev']);
-  grunt.registerTask('build', ['mkdir', 'cssmin', 'copy']);
+  // grunt.registerTask('build', ['mkdir', 'cssmin', 'copy']);
 };
