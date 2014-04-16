@@ -6,30 +6,30 @@ module.exports = function (grunt) {
 
     // makes the build direcories
     // so we can store minified stuff
-    mkdir: {
-      all: {
-        options: {
-          create: ['build/css', 'build/js', 'build/img']
-        }
-      }
-    },
+    // mkdir: {
+    //   all: {
+    //     options: {
+    //       create: ['build/css', 'build/js', 'build/img']
+    //     }
+    //   }
+    // },
     // mify css
-    cssmin: {
-      add_banner: {
-        options: {
-          banner: '/* minified by your mom with love */'
-        },
-        files: {
-          'build/css/style.css': ['src/css/style.css']
-        }
-      }
-    },
+    // cssmin: {
+    //   add_banner: {
+    //     options: {
+    //       banner: '/* minified by your mom with love */'
+    //     },
+    //     files: {
+    //       'build/css/style.css': ['src/css/style.css']
+    //     }
+    //   }
+    // },
     // copy images over to dist directory
-    copy: {
-      main: {
-        files: [ { expand: true, cwd: 'src/img', src: ['**'], dest: 'build/img/' }]
-      }
-    },
+    // copy: {
+    //   main: {
+    //     files: [ { expand: true, cwd: 'src/img', src: ['**'], dest: 'build/img/' }]
+    //   }
+    // },
     concurrent: {
       dev: {
         tasks: ['nodemon:dev'],
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
       dev: {
         script: 'index.js',
         options: {
-          cwd: __dirname + '/src/'
+          // cwd: __dirname + '/src/'
         }
       }
     }
