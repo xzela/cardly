@@ -1,4 +1,5 @@
 var express = require('express'),
+	cluster = require('cluster'),
 	exphbs  = require('express3-handlebars'),
 	mongoose = require('mongoose'),
 	hbsConfig = require('./config/handlebars.js'),
@@ -38,10 +39,9 @@ connect();
 require('./routes/routes.js')(app);
 
 app.listen(app.get('port'), function () {
-	logger.info('Server started on port: ' + app.get('port') + ", process:" + '');
-	if (process._channel !== undefined) {
-		logger.info("I'm a worker thread");
-		logger.info(process._channel);
+	logger.info('Server started on port: ' + app.get('port'));
+	if (!cluster.isMaster) {
+		logger.info("I'm a worker thread: " + cluster.worker.id + ":" + cluster.worker.process.pid);
 	}
 
 });
