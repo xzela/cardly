@@ -4,11 +4,14 @@ var Users = require('../../modules/Users'),
 var logger = log.getLogger(__filename);
 
 /**
- * [_get description]
+ * Returns all known users
  *
- * @param  {[type]} request  [description]
- * @param  {[type]} response [description]
- * @return {[type]}          [description]
+ * @method all
+ *
+ * @param  {Object} request  Request object
+ * @param  {Object} response Response object
+ *
+ * @return null
  */
 var all = function (request, response) {
 	var users = new Users();
@@ -19,9 +22,19 @@ var all = function (request, response) {
 		logger.error(error);
 		response.json(error);
 	});
-	users.getAll();
+	users.fetchAll();
 };
 
+/**
+ * Returns a known user by Id
+ *
+ * @method byId
+ *
+ * @param  {Object} request  Request object
+ * @param  {Object} response Reponse object
+ *
+ * @return null
+ */
 var byId = function (request, response) {
 	var users = new Users();
 	var id = request.params.id;
