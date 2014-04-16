@@ -6,9 +6,11 @@ var mongoose = require('mongoose'),
 
 var logger = log.getLogger(__filename);
 /**
- * [Users description]
+ * Users module
  *
- * @param {[type]} options [description]
+ * @class Users
+ *
+ * @param {Object} options Options to be used in module
  */
 function Users(options) {
 	events.EventEmitter.call(this);
