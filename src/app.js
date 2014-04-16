@@ -38,5 +38,10 @@ connect();
 require('./routes/routes.js')(app);
 
 app.listen(app.get('port'), function () {
-	console.log('Server started on port: ' + app.get('port'));
+	logger.info('Server started on port: ' + app.get('port') + ", process:" + '');
+	if (process._channel !== undefined) {
+		logger.info("I'm a worker thread");
+		logger.info(process._channel);
+	}
+
 });
