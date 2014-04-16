@@ -16,7 +16,7 @@ app.configure(function () {
 	app.set('port', 3000);
 });
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public'));
 
 app.engine('.hbs', exphbs(hbsConfig));
 app.set('view engine', '.hbs');
